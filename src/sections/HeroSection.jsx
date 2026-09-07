@@ -66,12 +66,12 @@ const HeroSection = () => {
       id="hero"
       className="relative bg-[#070709] text-white overflow-hidden pb-12"
     >
-      {/* = BACKGROUND: Looping Video — */}
+      {/* = BACKGROUND: Looping Video (Top Hero Area Only) — */}
       <div
-        className="absolute inset-0 z-0 overflow-hidden"
+        className="absolute top-0 inset-x-0 h-[650px] md:h-[750px] z-0 overflow-hidden pointer-events-none"
         style={{
-          WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 98%)',
-          maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 98%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
+          maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
         }}
       >
         <video
@@ -81,8 +81,8 @@ const HeroSection = () => {
           playsInline
           className="absolute inset-0 w-full h-full object-cover"
           style={{
-            opacity: 0.6,
-            filter: 'grayscale(100%) contrast(1.15) brightness(1.)',
+            opacity: 0.5,
+            filter: 'grayscale(100%) contrast(1.15) brightness(1.3)',
             objectPosition: 'center 18%',
             transform: 'scale(1.35)',
             transformOrigin: 'center 18%',
@@ -93,11 +93,11 @@ const HeroSection = () => {
         {/* Dark overlay layers */}
         <div className="absolute inset-0 bg-[#070709]/50" />
         <div className="absolute inset-0 bg-gradient-to-r from-[#070709]/80 via-[#070709]/20 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#070709] via-[#070709]/90 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#070709] via-[#070709] to-transparent" />
       </div>
 
-      {/* ===== Shooting Stars over video ===== */}
-      <div className="absolute inset-0 z-10 pointer-events-none">
+      {/* ===== Shooting Stars over top video hero area only ===== */}
+      <div className="absolute top-0 inset-x-0 h-[650px] md:h-[750px] z-10 pointer-events-none overflow-hidden">
         <ShootingStars />
       </div>
 

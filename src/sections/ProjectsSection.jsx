@@ -4,9 +4,9 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { motion } from 'framer-motion';
 
 import ProjectCard from '../components/ProjectCard';
-import poloProjectBuildingBrands from '../assets/images/polo_project_building_brands.jpg';
-import poloProject1Img from '../assets/images/polo_project_1.jpg';
-import poloProject2Img from '../assets/images/polo_project_2.jpg';
+import poloProjectBuildingBrands from '../assets/images/1q1n0UavD6GRCdPoosEQxM5TmpQ.png';
+import poloProject1Img from '../assets/images/B46VnW80N88dC2fK7yW0nsm1Fw.png';
+import poloProject2Img from '../assets/images/wonjYFYHeebnK8WRvO1qondtAh4.png';
 import sy0b9tueImg from '../assets/images/sy0b9tueLscYoe1Yckd5M2kdM.jpeg';
 
 if (typeof window !== 'undefined') {
@@ -15,8 +15,8 @@ if (typeof window !== 'undefined') {
 
 const CardArrowButton = ({ isHovered }) => {
   return (
-    <div className="absolute bottom-4 left-4 z-20 w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#111113] border border-white/10 overflow-hidden flex items-center justify-center text-white backdrop-blur-md shadow-lg">
-      {/* Arrow 1: Slides  UP on hover */}
+    <div className="absolute -bottom-2 -left-2 md:-bottom-2.5 md:-left-2.5 z-20 w-9 h-9 md:w-10 md:h-10 rounded-full bg-black overflow-hidden flex items-center justify-center text-white shadow-2xl pointer-events-none">
+      {/* Arrow 1: Slides UP on hover */}
       <motion.span
         className="absolute inset-0 flex items-center justify-center"
         animate={{
@@ -24,17 +24,16 @@ const CardArrowButton = ({ isHovered }) => {
           opacity: isHovered ? 0 : 1,
         }}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           ease: [0.25, 1, 0.5, 1],
         }}
       >
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="7" y1="17" x2="17" y2="7" />
-          <polyline points="7 7 17 7 17 17" />
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M7 17L17 7M17 7H7M17 7V17" />
         </svg>
       </motion.span>
 
-      {/* Arrow 2: Enters  from BOTTOM on hover */}
+      {/* Arrow 2: Enters from BOTTOM on hover */}
       <motion.span
         className="absolute inset-0 flex items-center justify-center"
         initial={{ y: '100%', opacity: 0 }}
@@ -43,13 +42,12 @@ const CardArrowButton = ({ isHovered }) => {
           opacity: isHovered ? 1 : 0,
         }}
         transition={{
-          duration: 0.4,
+          duration: 0.3,
           ease: [0.25, 1, 0.5, 1],
         }}
       >
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-          <line x1="7" y1="17" x2="17" y2="7" />
-          <polyline points="7 7 17 7 17 17" />
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M7 17L17 7M17 7H7M17 7V17" />
         </svg>
       </motion.span>
     </div>
@@ -69,17 +67,19 @@ const ProjectCardItem = ({ project, idx, cardsRef }) => {
     >
       <ProjectCard
         showHoverBadge={project.showViewBadge}
-        className="p-2 md:p-2.5 bg-[#0b0b0e] border border-white/10 rounded-[10px] md:rounded-[18px] overflow-hidden"
+        className="p-3 md:p-3.5 bg-[#0b0b0e] border border-white/10 rounded-[18px] md:rounded-[24px] overflow-visible"
       >
-        {/* Main Project Image Display */}
-        <div className={`relative w-full rounded-[14px] md:rounded-[18px] overflow-hidden ${project.aspectRatio || 'aspect-[16/10]'} bg-zinc-950`}>
-          <img
-            src={project.img}
-            alt={project.title}
-            className="w-full h-full object-cover filter grayscale contrast-105"
-          />
+        <div className="relative w-full">
+          {/* Main Project Image Display */}
+          <div className={`relative w-full rounded-[12px] md:rounded-[18px] overflow-hidden ${project.aspectRatio || 'aspect-[16/10]'} bg-zinc-950`}>
+            <img
+              src={project.img}
+              alt={project.title}
+              className="w-full h-full object-cover filter grayscale contrast-105"
+            />
+          </div>
 
-          {/* Animated Circular Arrow Button */}
+          {/* Animated Circular Arrow Button — Overlapping half on image and half on card border */}
           <CardArrowButton isHovered={isHovered} />
         </div>
       </ProjectCard>
@@ -171,7 +171,7 @@ const ProjectsSection = () => {
     <div
       ref={sectionRef}
       id="projects"
-      className="relative text-white w-full overflow-hidden pt-0 pb-6"
+      className="relative text-white w-full overflow-hidden pt-0 pb-6 bg-[#070709] z-20"
     >
       <div className="w-full">
         {/* 2-Column  Grid*/}

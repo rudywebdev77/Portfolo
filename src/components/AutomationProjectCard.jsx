@@ -74,7 +74,7 @@ const AutomationProjectCard = ({
 
       {/* Circular Arrow Button at lower-left card edge */}
       {showArrow && (
-        <div className="absolute bottom-6 left-6 z-20 w-10 h-10 rounded-full bg-black/90 border border-white/15 flex items-center justify-center text-white text-sm shadow-lg group-hover:bg-white group-hover:text-black transition-all duration-300">
+        <div className="absolute bottom-8 left-8 z-20 w-8 h-8 md:w-9 md:h-9 rounded-full bg-[#18181a]/95 border border-white/20 flex items-center justify-center text-white text-xs shadow-lg group-hover:bg-white group-hover:text-black transition-all duration-300">
           <span className="transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200">
             ↗
           </span>
