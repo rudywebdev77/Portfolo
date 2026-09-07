@@ -25,7 +25,7 @@ const Footer = () => {
     <footer
       ref={footerRef}
       id="footer"
-      className="relative w-full bg-[#070709] z-0 text-white pt-8 md:pt-12 pb-30 md:pb-24 px-6 sm:px-10 md:px-16 lg:px-20 "
+      className="relative w-full bg-[#070709] z-0 text-white pt-8 md:pt-12 pb-20 md:pb-24 px-6 sm:px-10 md:px-16 lg:px-20 "
     >
       <div className="w-full max-w-[1400px] mx-auto flex flex-col gap-10">
 
