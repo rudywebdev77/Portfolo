@@ -7,7 +7,7 @@ import AnimatedButton from '../components/AnimatedButton';
 import ServiceCard from '../components/ServiceCard';
 import ServiceTags from '../components/ServiceTags';
 
-// Portfolio Image Assets for Service Cards
+//  Image for Service Cards
 import websiteDesignImg from '../assets/images/IwwlXF60xjgLFBH3Sj6kzl9eXs.png';
 import framerDesignImg from '../assets/images/B6zI6nUrHNwrRM7ASHmAUUgXW0c.png';
 import framerDesignImg2 from '../assets/images/qaXP9CBTkpCNVvyTQ6Uxc8kN5ts.png';
@@ -19,7 +19,7 @@ if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-// Exact Monochrome Service Card Icons matching reference images
+// Exact Service Card Icons
 const websiteIcon = (
   <svg className="w-5 h-5 text-white shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <rect x="3" y="3" width="18" height="18" rx="3" />
@@ -28,7 +28,7 @@ const websiteIcon = (
   </svg>
 );
 
-// Vector Corner Curve Crop Tool Icon from reference images 1 & 2
+// Vector Crop Tool Icon
 const vectorCurveIcon = (
   <svg className="w-5 h-5 text-white shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
     <path d="M3 7h5M7 3v14h14" />
@@ -117,10 +117,10 @@ const DesignServicesSection = () => {
           </div>
         </div>
 
-        {/* SERVICE CARDS ASYMMETRIC 2-COLUMN GRID COMPOSITION MATCHING REFERENCE */}
+        {/* SERVICE CARDS ASYMMETRIC 2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-start">
 
-          {/* LEFT COLUMN: Tall Website Design + Short Graphic Design */}
+          {/* LEFT COLUMN*/}
           <div className="flex flex-col gap-4 md:gap-6">
             <ServiceCard
               ref={websiteCardRef}
@@ -137,7 +137,7 @@ const DesignServicesSection = () => {
             />
           </div>
 
-          {/* RIGHT COLUMN: Short Logo Design + Tall Framer Design */}
+          {/* RIGHT COLUMN */}
           <div className="flex flex-col gap-4 md:gap-6">
             <ServiceCard
               ref={logoCardRef}
@@ -156,7 +156,7 @@ const DesignServicesSection = () => {
 
         </div>
 
-        {/* SERVICE TAGS AREA — 2 HORIZONTAL ROWS BELOW CARDS */}
+        {/* SERVICE TAGS AREA */}
         <ServiceTags
           ref={tagsRef}
           topRowRef={topTagsRef}

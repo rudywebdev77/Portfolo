@@ -47,7 +47,7 @@ const HeroSection = () => {
         yoyo: true,
       });
 
-      // Continuous subtle floating animation for Card 2 + Arrow 2
+      //  animation for Card 2 + Arrow 2
       gsap.to([card2Ref.current, arrow2Ref.current], {
         y: 10,
         duration: 3.2,
@@ -66,7 +66,7 @@ const HeroSection = () => {
       id="hero"
       className="relative bg-[#070709] text-white overflow-hidden pb-12"
     >
-      {/* ===== BACKGROUND: Looping Video — dark grayscale (Only Sphere Visible) ===== */}
+      {/* = BACKGROUND: Looping Video — */}
       <div
         className="absolute inset-0 z-0 overflow-hidden"
         style={{
@@ -104,7 +104,7 @@ const HeroSection = () => {
       {/* ===== FOREGROUND CONTENT ===== */}
       <div className="relative z-20 w-full pt-28 md:pt-36">
 
-        {/* TOP HERO ROW: Text Content + Floating Testimonial Cards — Standard Hero Margins */}
+        {/* TOP HERO ROW: Text Content + Floating Testimonial Cards*/}
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-0">
           {/* LEFT: Text Content */}
           <div className="lg:col-span-7 flex flex-col items-start">
@@ -132,17 +132,17 @@ const HeroSection = () => {
               />
             </div>
 
-            {/* Buttons — Vertical full-width stack on mobile matching reference screenshot */}
+            {/* Buttons — Vertical full-width */}
             <div ref={btnsRef} className="flex flex-col sm:flex-row w-full sm:w-auto items-stretch sm:items-center gap-3 sm:gap-4">
               <HeroButton variant="secondary" href="#projects" className="w-full sm:w-auto text-center py-3.5">See All Projects</HeroButton>
               <HeroButton variant="primary" href="#contact" className="w-full sm:w-auto text-center py-3.5">Contact Now</HeroButton>
             </div>
           </div>
 
-          {/* RIGHT: Floating Testimonial Cards + Cursors */}
+          {/* RIGHT: Floating Testimonial Cards*/}
           <div className="lg:col-span-5 relative min-h-[360px] hidden lg:block">
 
-            {/* Card 1 — upper left, -8deg rotation */}
+            {/* Card 1 — upper left */}
             <div
               ref={card1Ref}
               className="absolute z-20 "
@@ -154,7 +154,7 @@ const HeroSection = () => {
               />
             </div>
 
-            {/* Card 2 — lower right, -3deg tilt */}
+            {/* Card 2 — lower right */}
             <div
               ref={card2Ref}
               className="absolute z-20"
@@ -166,9 +166,9 @@ const HeroSection = () => {
               />
             </div>
 
-            {/* ===== EXACT 2 CURSOR ARROWS MATCHING REFERENCE POSITIONS ===== */}
+            {/* EXACT 2 CURSOR ARROWS */}
 
-            {/* Cursor 1: Pointing top-right (↗) facing Cursor 2 */}
+            {/* Cursor 1: Pointing top-right */}
             <div
               ref={arrow1Ref}
               className="absolute z-30 pointer-events-none"
@@ -179,7 +179,7 @@ const HeroSection = () => {
               </svg>
             </div>
 
-            {/* Cursor 2: Pointing top-left (↖) facing Cursor 1 */}
+            {/* Cursor 2: Pointing top-left*/}
             <div
               ref={arrow2Ref}
               className="absolute z-30 pointer-events-none"
@@ -192,7 +192,7 @@ const HeroSection = () => {
           </div>
         </div>
 
-        {/* BOTTOM: Projects Section — ONLY project images get wider width & minimal side margins */}
+        {/* BOTTOM: Projects Section */}
         <div className="w-full max-w-[1440px] mx-auto px-2 sm:px-4 md:px-6 lg:px-8 mt-5 md:mt-6">
           <ProjectsSection />
         </div>

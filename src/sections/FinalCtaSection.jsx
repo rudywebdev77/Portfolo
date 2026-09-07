@@ -15,7 +15,7 @@ const FinalCtaSection = () => {
         {/* Column Layout */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
 
-          {/* LEFT COLUMN + Vertical Services + Buttons */}
+          {/* LEFT COLUMN + Services + Buttons */}
           <div className="lg:col-span-6 flex flex-col justify-between">
 
             {/* Header: Badge + Heading */}

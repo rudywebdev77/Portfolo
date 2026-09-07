@@ -47,7 +47,7 @@ const AutomationSection = () => {
     >
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
         
-        {/* Left Column: Monochrome Portrait Card */}
+        {/* Left Column:  Portrait Card */}
         <div ref={portraitCardRef} className="lg:col-span-6 w-full flex">
           <AutomationProjectCard className="w-full min-h-[540px] flex flex-col justify-between relative">
             <div className="relative w-full h-full min-h-[460px] rounded-2xl overflow-hidden bg-zinc-900 border border-white/5">
@@ -61,7 +61,7 @@ const AutomationSection = () => {
           </AutomationProjectCard>
         </div>
 
-        {/* Right Column: Scale Business with Automation Card */}
+        {/* Right Column: with Automation Card */}
         <div ref={automationCardRef} className="lg:col-span-6 w-full flex">
           <AutomationProjectCard className="w-full min-h-[540px] flex flex-col justify-between bg-[#0b0b0d]">
             
@@ -85,7 +85,7 @@ const AutomationSection = () => {
                 gain insights, and optimize your strategy with AI-powered intelligence.
               </p>
 
-              {/* Horizontally Aligned Buttons */}
+              {/* Horizantally Aligned Buttons */}
               <div className="flex items-center gap-3 flex-wrap mb-10">
                 <a
                   href="#contact"
@@ -102,7 +102,7 @@ const AutomationSection = () => {
               </div>
             </div>
 
-            {/* Bottom Client / Brand Logos Row */}
+            {/* Bottom / Brand Logos  */}
             <div className="pt-6 border-t border-white/10 flex items-center justify-between gap-4 flex-wrap text-xs md:text-sm font-mono text-zinc-500 uppercase tracking-widest">
               {logoItems.map((logo) => (
                 <span key={logo} className="hover:text-zinc-300 transition-colors">
@@ -115,7 +115,7 @@ const AutomationSection = () => {
         </div>
       </div>
 
-      {/* Downward Arrow & Made in Framer Footer Elements */}
+      {/* Downward Arrow & Footer Elements */}
       <div className="max-w-7xl mx-auto mt-16 flex items-center justify-between px-4">
         {/* Centered Down Arrow */}
         <div ref={downArrowRef} className="mx-auto flex flex-col items-center gap-1 text-zinc-500 animate-bounce">

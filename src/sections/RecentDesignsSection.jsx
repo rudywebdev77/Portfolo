@@ -77,7 +77,7 @@ const RecentDesignsSection = () => {
       id="recent-designs"
       className="relative min-h-screen bg-[#070709] text-white pt-2 md:pt-4 pb-12 md:pb-20 px-0 overflow-hidden"
     >
-      {/* Outer Contained Dark Container */}
+      {/* Outer  Container */}
       <div className="w-full rounded-[28px] md:rounded-[36px] bg-[#09090c] border border-white/10 border-b-0 px-5 sm:px-10 md:px-16 lg:px-22
        py-8 sm:py-10 md:py-14 lg:py-16 shadow-2xl relative">
 
@@ -91,7 +91,7 @@ const RecentDesignsSection = () => {
             <HeroBadge text="⊙ Recent Projects" />
           </div>
 
-            {/* Main Heading: Two-tone "Recent Designs" + Arrow Action */}
+            {/* Main Heading: Two-tone  */}
             <div className="flex items-center gap-3.5 mb-4 flex-wrap">
               <h2 className="text-4xl sm:text-5xl md:text-6xl tracking-tight leading-none flex items-center gap-3">
                 <span className="text-white font-normal">Recent</span>
@@ -117,10 +117,10 @@ const RecentDesignsSection = () => {
           </div>
         </div>
 
-        {/* STAGGERED / MASONRY PROJECT COMPOSITION */}
+        {/* STAGGERED /  */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-5 items-start">
 
-          {/* LEFT COLUMN: Fade (Tall) → Alter (Short) */}
+          {/* LEFT COLUMN:  */}
           <div className="flex flex-col gap-4 md:gap-6 w-full">
             {/* Fade Card */}
             <ProjectPreviewCard
@@ -141,7 +141,7 @@ const RecentDesignsSection = () => {
             />
           </div>
 
-          {/* RIGHT COLUMN: One Day We Met (Short) → AtomAI (Tall) */}
+          {/* RIGHT COLUMN */}
           <div className="flex flex-col gap-4 md:gap-6 w-full">
             {/* One Day We Met Card */}
             <ProjectPreviewCard

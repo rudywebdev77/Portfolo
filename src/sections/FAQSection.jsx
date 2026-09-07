@@ -73,13 +73,13 @@ const FaqSection = () => {
       id="faq"
       className="relative w-full bg-[#070709] text-white py-12 md:py-20 px-0"
     >
-      {/* Outer Contained Dark Container */}
+      {/* Outer Container */}
       <div className="w-full max-w-full mx-auto rounded-[28px] md:rounded-[36px] bg-[#09090c] border border-white/10 p-6 sm:p-10 md:p-14 lg:p-16 shadow-2xl">
 
-        {/* Dost wala grid setup: items-start ke sath */}
+        {/*  grid setup */}
         <div className="ml-0 lg:ml-8 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-          {/* LEFT COLUMN: Sticky formula (top-[105px] + self-start) */}
+          {/* LEFT COLUMN: Sticky formula ) */}
           <div className="lg:col-span-5 min-w-0 lg:sticky lg:top-[105px] lg:self-start flex flex-col justify-between">
             <div>
               {/* Top Pill Badge */}
@@ -98,7 +98,7 @@ const FaqSection = () => {
                 Get quick answers to your most pressing questions
               </p>
 
-              {/* Review Card: inset shadow touch */}
+              {/* Review Card*/}
               <div
                 className="w-full rounded-[20px]  p-7 md:p-8 mb-8 shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
                 style={{
@@ -154,7 +154,7 @@ const FaqSection = () => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: FAQ Accordion List */}
+          {/* RIGHT COLUMN: FAQ List */}
           <div className="lg:col-span-7 w-full flex flex-col gap-[8px] pb-6 mt-3">
             {faqItems.map((item, idx) => (
               <FaqItem

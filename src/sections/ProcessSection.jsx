@@ -109,14 +109,14 @@ const ProcessSection = () => {
             Process Is <span className="text-zinc-400">Everything</span>
           </h2>
 
-          {/* Subtitle — Letter-by-letter character reveal animation */}
+          {/* letter character reveal animation */}
           <AnimatedTypewriterText
             text="Simple, streamlined process is what get's you results"
             className="text-zinc-400 text-sm sm:text-base max-w-xl font-normal leading-relaxed"
           />
         </div>
 
-        {/* Scroll-Driven Horizontal Cards Track Viewport */}
+        {/* Scroll-Driven  Cards  */}
         <div className="relative w-full overflow-hidden py-4">
           <div
             ref={trackRef}

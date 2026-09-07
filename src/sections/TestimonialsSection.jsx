@@ -52,15 +52,15 @@ const TestimonialsSection = () => {
       id="testimonials"
       className="relative w-full bg-[#070709] text-white py-12 md:py-20 px-0"
     >
-      {/* Outer Contained Dark Container */}
+      {/* Outer k Container */}
       <div className="w-full max-w-full mx-auto rounded-[28px] md:rounded-[36px] bg-[#09090c] border border-white/10 border-b-0 p-6 sm:p-12 md:p-18 lg:p-20
        shadow-2xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
 
-          {/* LEFT COLUMN: Heading, Subtitle, Stats & Action Buttons (Sticky Header) */}
+          {/* LEFT COLUMN:  (Sticky Header) */}
           <div className="lg:col-span-6 flex flex-col justify-between lg:sticky lg:top-28">
             <div>
-              {/* Top Pill Badge: "⊙ Happy Clients" */}
+              {/*  Badge: " Happy Clients" */}
               <div className="mb-5">
                 <HeroBadge text="⊙ Happy Clients" />
               </div>
@@ -76,7 +76,7 @@ const TestimonialsSection = () => {
                 Trusted by 100+ happy clients, adding $250M+ in revenue.
               </p>
 
-              {/* Stats Row (100+, $250m, 4.8) */}
+              {/* Stats Row  */}
               <div className="grid grid-cols-3 gap-3 sm:gap-4 mb-8">
                 <div className="bg-[#0c0c0e] shadow-[0_20px_50px_rgba(0,0,0,0.8)] border border-white/5 rounded-[8px] p-4 sm:p-5 flex flex-col items-center justify-center text-center">
                   <span className="text-2xl sm:text-3xl font-medium text-white mb-1">100+</span>
@@ -110,7 +110,7 @@ const TestimonialsSection = () => {
             </div>
           </div>
 
-          {/* RIGHT COLUMN: Pure Tailwind Sticky Cards Stacking Area */}
+          {/* RIGHT COLUMN:  Sticky Cards */}
           <div className="lg:col-span-6 flex flex-col relative gap-4 lg:gap-0">
             {testimonialsData.map((item, index) => {
               const isLastCard = index === testimonialsData.length - 1;

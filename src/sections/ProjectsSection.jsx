@@ -71,7 +71,7 @@ const ProjectCardItem = ({ project, idx, cardsRef }) => {
         showHoverBadge={project.showViewBadge}
         className="p-2 md:p-2.5 bg-[#0b0b0e] border border-white/10 rounded-[10px] md:rounded-[18px] overflow-hidden"
       >
-        {/* Main Project Image Display — dynamic height/aspect-ratio for each image */}
+        {/* Main Project Image Display */}
         <div className={`relative w-full rounded-[14px] md:rounded-[18px] overflow-hidden ${project.aspectRatio || 'aspect-[16/10]'} bg-zinc-950`}>
           <img
             src={project.img}
@@ -97,7 +97,7 @@ const ProjectsSection = () => {
       const topCards = [cardsRef.current[0], cardsRef.current[1]].filter(Boolean);
       const bottomCards = [cardsRef.current[2], cardsRef.current[3]].filter(Boolean);
 
-      // Top 2 Cards: Animate from LEFT side immediately on website open
+      // Top 2 Cards: Animate from left
       if (topCards.length > 0) {
         gsap.fromTo(
           topCards,
@@ -142,28 +142,28 @@ const ProjectsSection = () => {
       title: 'Building brands to drive Results',
       img: poloProjectBuildingBrands,
       showViewBadge: true,
-      aspectRatio: 'h-[520px]', // Card 1 height
+      aspectRatio: 'h-[520px]', 
     },
     {
       id: 2,
       title: 'ONE DAY, WE MET',
       img: poloProject1Img,
       showViewBadge: true,
-      aspectRatio: 'h-[250px]', // Card 2 height
+      aspectRatio: 'h-[250px]', 
     },
     {
       id: 3,
       title: 'Futuristic Portrait',
       img: sy0b9tueImg,
       showViewBadge: true,
-      aspectRatio: 'h-[250px]', // Card 3 height
+      aspectRatio: 'h-[250px]', 
     },
     {
       id: 4,
       title: 'Scale Business with Automation',
       img: poloProject2Img,
       showViewBadge: true,
-      aspectRatio: 'h-[520px]', // Card 4 height
+      aspectRatio: 'h-[520px]', 
     },
   ];
 
@@ -174,7 +174,7 @@ const ProjectsSection = () => {
       className="relative text-white w-full overflow-hidden pt-0 pb-6"
     >
       <div className="w-full">
-        {/* 2-Column Masonry Grid — eliminates empty gaps when cards have different heights */}
+        {/* 2-Column  Grid*/}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 items-start">
           {/* Left Column: Card 1 & Card 3 */}
           <div className="flex flex-col gap-3 md:gap-4 w-full">
@@ -189,7 +189,7 @@ const ProjectsSection = () => {
           </div>
         </div>
 
-        {/* Centered Downward Chevron Arrow with slow smooth float animation */}
+        {/*  Arrow with  smooth  animation */}
         <div className="flex justify-center mt-6 mb-2">
           <div className="animate-float-slow text-white/90 p-1">
             <svg className="w-7 h-7 md:w-8 md:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">

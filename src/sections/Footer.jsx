@@ -29,7 +29,7 @@ const Footer = () => {
     >
       <div className="w-full max-w-[1400px] mx-auto flex flex-col gap-10">
 
-        {/* TOP ROW: (Left),  (Right) */}
+        {/* TOP ROW: Left  Right */}
         <div className="flex items-center justify-between py-6 md:py-8">
           {/* Polo Logo */}
           <a href="#" className="flex items-center hover:opacity-90 transition-opacity">
@@ -41,7 +41,7 @@ const Footer = () => {
           </a>
 
 
-          {/* Social Media Icons (hidden on mobile, visible on sm desktop) */}
+          {/* Social Media Icons  */}
           <div className="hidden sm:flex items-center gap-6 sm:gap-8 text-zinc-300">
             {/* X / Twitter */}
             <a href="https://twitter.com" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">

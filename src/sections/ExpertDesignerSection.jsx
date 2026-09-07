@@ -52,7 +52,7 @@ const ExpertDesignerSection = () => {
       id="about"
       className="relative min-h-screen bg-[#070709] text-white pt-2 md:pt-4 pb-12 md:pb-20 px-0 overflow-hidden"
     >
-      {/* Outer Large Rounded Container — 100% Screen Width (Zero Margins) */}
+      {/* Outer Large Container  */}
       <div className="w-full rounded-[28px] md:rounded-[36px] bg-[#09090c] border border-white/10 border-b-0 p-6 sm:p-8 md:p-12 lg:p-14 shadow-2xl relative">
 
         {/* Section Top Header */}
