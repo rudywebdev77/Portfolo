@@ -57,7 +57,7 @@ const ExpertDesignerSection = () => {
 
         {/* Section Top Header */}
         <div className="flex flex-col items-center text-center max-w-3xl mx-auto mb-12 md:mb-16">
-          {/* Badge — Same as HeroSection */}
+          {/* Badge —  */}
           <div ref={badgeRef} className="mb-6 ">
             <HeroBadge text="⊙ Expert Designer" />
           </div>

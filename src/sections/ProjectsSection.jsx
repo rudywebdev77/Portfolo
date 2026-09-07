@@ -16,7 +16,7 @@ if (typeof window !== 'undefined') {
 const CardArrowButton = ({ isHovered }) => {
   return (
     <div className="absolute bottom-4 left-4 z-20 w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#111113] border border-white/10 overflow-hidden flex items-center justify-center text-white backdrop-blur-md shadow-lg">
-      {/* Arrow 1: Slides straight UP on hover */}
+      {/* Arrow 1: Slides  UP on hover */}
       <motion.span
         className="absolute inset-0 flex items-center justify-center"
         animate={{
@@ -34,7 +34,7 @@ const CardArrowButton = ({ isHovered }) => {
         </svg>
       </motion.span>
 
-      {/* Arrow 2: Enters straight from BOTTOM on hover */}
+      {/* Arrow 2: Enters  from BOTTOM on hover */}
       <motion.span
         className="absolute inset-0 flex items-center justify-center"
         initial={{ y: '100%', opacity: 0 }}
