@@ -1,4 +1,4 @@
-import  { useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 
 const ShootingStars = () => {
@@ -6,38 +6,114 @@ const ShootingStars = () => {
 
   useEffect(() => {
     if (!containerRef.current) return;
+
     const ctx = gsap.context(() => {
       const container = containerRef.current;
       if (!container) return;
 
-      const starCount = 6;
+      const starCount = 5;
+
       for (let i = 0; i < starCount; i++) {
+        // Main container element for star + glowing head (initially hidden opacity-0)
         const star = document.createElement('div');
-        star.className =
-          'absolute h-[1px] bg-gradient-to-r from-transparent via-white/70 to-transparent pointer-events-none rounded-full';
-        star.style.width = `${Math.random() * 140 + 100}px`;
-        // Start from Left side (0% to 35%)
-        star.style.top = `${Math.random() * 55 + 5}%`;
-        star.style.left = `${Math.random() * 35 + 2}%`;
+        star.className = 'absolute flex items-center pointer-events-none z-0 opacity-0';
         star.style.opacity = '0';
-        star.style.transform = 'rotate(32deg)';
+
+        // Gradient tail (transparent at back, bright white towards front head)
+        const tail = document.createElement('div');
+        tail.className =
+          'h-[1.5px] w-full bg-gradient-to-r from-transparent via-white/40 to-white rounded-full';
+
+        // Glowing star head at the front leading edge
+        const head = document.createElement('div');
+        head.className =
+          '-ml-1 w-1 h-1 rounded-full bg-white shadow-[0_0_10px_3px_rgba(255,255,255,1),0_0_20px_6px_rgba(255,255,255,0.7)] shrink-0';
+
+        star.appendChild(tail);
+        star.appendChild(head);
         container.appendChild(star);
 
-        // Slow & smooth motion from Left to Right
-        gsap.to(star, {
-          x: 450,
-          y: 280,
-          opacity: 0.85,
-          duration: 3.2 + Math.random() * 1.5, // Slower speed
-          delay: i * 2.2 + Math.random() * 2,
-          repeat: -1,
-          repeatDelay: 4 + Math.random() * 4,
-          ease: 'power1.inOut',
-          onRepeat: () => {
-            star.style.top = `${Math.random() * 55 + 5}%`;
-            star.style.left = `${Math.random() * 35 + 2}%`;
-          },
-        });
+        const shoot = (isFirstRun = false) => {
+          const width = container.clientWidth || window.innerWidth || 1400;
+          const height = container.clientHeight || window.innerHeight || 800;
+
+          // Start positions (top-left area)
+          const startX = Math.random() * (width * 0.4) - 200;
+          const startY = Math.random() * (height * 0.5) - 80;
+
+          // ~30-34 degree angle matching classic shooting star orientation
+          const angle = 30 + Math.random() * 4;
+          const angleRad = (angle * Math.PI) / 180;
+
+          // Target X/Y distance to go past right screen edge (+350px extra)
+          const targetX = width - startX + 350;
+          const targetY = targetX * Math.tan(angleRad);
+
+          // Flight duration (smooth glide: ~320px/sec)
+          const totalDistance = Math.hypot(targetX, targetY);
+          const duration = totalDistance / (320 + Math.random() * 80);
+
+          // Shorter tail length (70px to 130px)
+          const starLength = Math.random() * 60 + 70;
+
+          // Instantly set position & keep hidden before delay timer starts
+          gsap.set(star, {
+            x: 0,
+            y: 0,
+            left: `${startX}px`,
+            top: `${startY}px`,
+            width: `${starLength}px`,
+            opacity: 0,
+            transform: `rotate(${angle}deg)`,
+            transformOrigin: 'left center',
+          });
+
+          // Shorter delay: stars start almost immediately and repeat more frequently (2s to 5s)
+          const delay = isFirstRun
+            ? i * 1.2 + Math.random() * 0.8
+            : Math.random() * 3 + 2;
+
+          const tl = gsap.timeline({
+            delay,
+            onComplete: () => shoot(false),
+          });
+
+          // 1. Continuous movement across screen (linear speed, no stopping)
+          tl.to(
+            star,
+            {
+              x: targetX,
+              y: targetY,
+              duration: duration,
+              ease: 'none',
+            },
+            0
+          );
+
+          // 2. Fade in quickly as it enters
+          tl.to(
+            star,
+            {
+              opacity: 1,
+              duration: duration * 0.15,
+              ease: 'power1.out',
+            },
+            0
+          );
+
+          // 3. Smooth fade out as it exits off screen
+          tl.to(
+            star,
+            {
+              opacity: 0,
+              duration: duration * 0.35,
+              ease: 'power1.in',
+            },
+            duration * 0.65
+          );
+        };
+
+        shoot(true);
       }
     }, containerRef.current);
 

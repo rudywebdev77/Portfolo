@@ -82,7 +82,7 @@ const HeroSection = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             opacity: 0.6,
-            filter: 'grayscale(100%) contrast(1.15) brightness(0.55)',
+            filter: 'grayscale(100%) contrast(1.15) brightness(1.)',
             objectPosition: 'center 18%',
             transform: 'scale(1.35)',
             transformOrigin: 'center 18%',
