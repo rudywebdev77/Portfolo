@@ -35,18 +35,18 @@ const ShootingStars = () => {
 
         const shoot = (isFirstRun = false) => {
           const width = container.clientWidth || window.innerWidth || 1400;
-          const height = container.clientHeight || window.innerHeight || 800;
+          const heroHeight = Math.min(container.clientHeight || 450, 480);
 
-          // Start positions (top-left area)
-          const startX = Math.random() * (width * 0.4) - 200;
-          const startY = Math.random() * (height * 0.5) - 80;
+          // Start position in upper-left header region only
+          const startX = Math.random() * (width * 0.3) - 180;
+          const startY = Math.random() * (heroHeight * 0.35) + 10;
 
-          // ~30-34 degree angle matching classic shooting star orientation
-          const angle = 30 + Math.random() * 4;
+          // Shallower 18-23 degree slope so stars fly across top header without descending vertically
+          const angle = 18 + Math.random() * 5;
           const angleRad = (angle * Math.PI) / 180;
 
-          // Target X/Y distance to go past right screen edge (+350px extra)
-          const targetX = width - startX + 350;
+          // Target X/Y distance (flies across right screen edge)
+          const targetX = width - startX + 300;
           const targetY = targetX * Math.tan(angleRad);
 
           // Flight duration (smooth glide: ~320px/sec)
