@@ -57,7 +57,7 @@ const AnimatedButton = ({ href = '#', children, variant = 'dark', className = ''
         } ${className}`}
       {...props}
     >
-      {/* Expanding Background Overlay Layer */}
+      {/* Expanding Background  Layer */}
       <span
         ref={bgRef}
         className={`absolute inset-0 rounded-full z-0 pointer-events-none opacity-0 scale-0 ${isDark ? 'bg-[#1c1c22]' : 'bg-zinc-200'

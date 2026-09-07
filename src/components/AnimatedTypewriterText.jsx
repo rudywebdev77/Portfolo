@@ -1,4 +1,4 @@
-import React from 'react';
+import  'react';
 import { motion } from 'framer-motion';
 
 const defaultText = "I'm a versatile designer specializing in graphic, web, and product design to help grow your business. Let's build something great!";

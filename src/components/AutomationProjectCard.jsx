@@ -17,7 +17,7 @@ const AutomationProjectCard = ({
   useEffect(() => {
     if (!badgeRef.current) return;
 
-    // QuickSetter / quickTo for ultra-smooth trailing cursor follow
+    // QuickSetter
     xTo.current = gsap.quickTo(badgeRef.current, 'x', {
       duration: 0.35,
       ease: 'power3.out',

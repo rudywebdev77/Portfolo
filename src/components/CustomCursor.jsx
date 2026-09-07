@@ -8,7 +8,7 @@ const CustomCursor = () => {
   const [isHiddenByBadge, setIsHiddenByBadge] = useState(false);
 
   useEffect(() => {
-    // Only activate custom cursor on non-touch desktop screens
+    // Only activate custom cursor 
     if (typeof window !== 'undefined' && window.matchMedia('(pointer: coarse)').matches) {
       return;
     }
@@ -19,7 +19,7 @@ const CustomCursor = () => {
       targetPos.current = { x, y };
       setIsVisible(true);
 
-      // Hide white dot cursor when hovering over elements that have custom cursor badges (e.g. project cards)
+      // Hide white dot cursor 
       const target = e.target;
       const isOverBadgeElement = target && target.closest && !!target.closest('[data-hide-cursor="true"]');
 
