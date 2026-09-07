@@ -97,7 +97,7 @@ const HeroSection = () => {
       </div>
 
       {/* ===== Shooting Stars over top video hero area only ===== */}
-      <div className="absolute top-0 inset-x-0 h-[650px] md:h-[750px] z-10 pointer-events-none overflow-hidden">
+      <div className="absolute top-0 inset-x-0 h-[450px] md:h-[500px] z-10 pointer-events-none overflow-hidden">
         <ShootingStars />
       </div>
 
