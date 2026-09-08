@@ -38,7 +38,7 @@ const HeroSection = () => {
         .fromTo(card1Ref.current, { x: 40, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9 }, '-=0.5')
         .fromTo(card2Ref.current, { x: 50, opacity: 0 }, { x: 0, opacity: 1, duration: 0.9 }, '-=0.6');
 
-      // Continuous subtle floating animation for Card 1 + Arrow 1
+      // animation for Card 1 + Arrow 1
       gsap.to([card1Ref.current, arrow1Ref.current], {
         y: -10,
         duration: 2.8,
@@ -66,7 +66,7 @@ const HeroSection = () => {
       id="hero"
       className="relative bg-[#070709] text-white overflow-hidden pb-12"
     >
-      {/* = BACKGROUND: Looping Video (Top Hero Area Only) — */}
+      {/* = BACKGROUND Video  */}
       <div
         className="absolute top-0 inset-x-0 h-[650px] md:h-[750px] z-0 overflow-hidden pointer-events-none"
         style={{
@@ -132,7 +132,7 @@ const HeroSection = () => {
               />
             </div>
 
-            {/* Buttons — Vertical full-width with ProcessSection AnimatedButton style */}
+            {/* Buttons  AnimatedButton */}
             <div ref={btnsRef} className="flex flex-col sm:flex-row w-full sm:w-auto items-stretch sm:items-center gap-3 sm:gap-4">
               <AnimatedButton variant="dark" href="#projects" className="w-full sm:w-auto text-center py-3.5">See All Projects</AnimatedButton>
               <AnimatedButton variant="light" href="#contact" className="w-full sm:w-auto text-center py-3.5">Contact Now</AnimatedButton>
