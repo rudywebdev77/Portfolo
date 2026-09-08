@@ -19,15 +19,15 @@ const ShootingStars = () => {
         star.className = 'absolute flex items-center pointer-events-none z-0 opacity-0';
         star.style.opacity = '0';
 
-        // Gradient tail (transparent at back, bright white towards front head)
+        // Gradient tail (softer white transparent tail)
         const tail = document.createElement('div');
         tail.className =
-          'h-[1.5px] w-full bg-gradient-to-r from-transparent via-white/40 to-white rounded-full';
+          'h-[1.5px] w-full bg-gradient-to-r from-transparent via-white/25 to-white/40 rounded-full';
 
         // Glowing star head at the front leading edge
         const head = document.createElement('div');
         head.className =
-          '-ml-1 w-1 h-1 rounded-full bg-white shadow-[0_0_10px_3px_rgba(255,255,255,1),0_0_20px_6px_rgba(255,255,255,0.7)] shrink-0';
+          '-ml-1 w-1 h-1 rounded-full bg-white/50 shadow-[0_0_6px_2px_rgba(255,255,255,0.6),0_0_12px_4px_rgba(255,255,255,0.3)] shrink-0';
 
         star.appendChild(tail);
         star.appendChild(head);
@@ -49,9 +49,9 @@ const ShootingStars = () => {
           const targetX = width - startX + 300;
           const targetY = targetX * Math.tan(angleRad);
 
-          // Flight duration (smooth glide: ~320px/sec)
+          // Flight duration (gentle glide: ~190px/sec)
           const totalDistance = Math.hypot(targetX, targetY);
-          const duration = totalDistance / (320 + Math.random() * 80);
+          const duration = totalDistance / (190 + Math.random() * 50);
 
           // Shorter tail length (70px to 130px)
           const starLength = Math.random() * 60 + 70;
@@ -90,11 +90,11 @@ const ShootingStars = () => {
             0
           );
 
-          // 2. Fade in quickly as it enters
+          // 2. Fade in softly as it enters
           tl.to(
             star,
             {
-              opacity: 1,
+              opacity: 0.65,
               duration: duration * 0.15,
               ease: 'power1.out',
             },

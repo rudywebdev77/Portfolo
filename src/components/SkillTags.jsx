@@ -22,7 +22,7 @@ const SkillTags = () => {
           <span
             key={tag}
             className="px-3 py-2 rounded-xl bg-black/50  text-md md:text-lg font-normal
-             text-zinc-400 hover:text-white "
+             text-zinc-400  "
           >
             {tag}
           </span>

@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 import HeroBadge from '../components/HeroBadge';
-import HeroButton from '../components/HeroButton';
+import AnimatedButton from '../components/AnimatedButton';
 import TestimonialCard from '../components/TestimonalCard';
 import ShootingStars from '../components/ShootingStars';
 import HeroAboutAction from '../components/HeroAboutAction';
@@ -82,7 +82,7 @@ const HeroSection = () => {
           className="absolute inset-0 w-full h-full object-cover"
           style={{
             opacity: 0.5,
-            filter: 'grayscale(100%) contrast(1.15) brightness(1.3)',
+            filter: 'grayscale(100%) contrast(1.15) brightness(1)',
             objectPosition: 'center 18%',
             transform: 'scale(1.35)',
             transformOrigin: 'center 18%',
@@ -96,15 +96,15 @@ const HeroSection = () => {
         <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-t from-[#070709] via-[#070709] to-transparent" />
       </div>
 
-      {/* ===== Shooting Stars over top video hero area only ===== */}
+      {/*  Shooting Stars */}
       <div className="absolute top-0 inset-x-0 h-[450px] md:h-[500px] z-10 pointer-events-none overflow-hidden">
         <ShootingStars />
       </div>
 
-      {/* ===== FOREGROUND CONTENT ===== */}
+      {/* FOREGROUND CONTENT */}
       <div className="relative z-20 w-full pt-28 md:pt-36">
 
-        {/* TOP HERO ROW: Text Content + Floating Testimonial Cards*/}
+        {/* TOP HERO :Testimonial Cards*/}
         <div className="max-w-7xl mx-auto px-6 md:px-12 lg:px-16 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-0">
           {/* LEFT: Text Content */}
           <div className="lg:col-span-7 flex flex-col items-start">
@@ -114,7 +114,7 @@ const HeroSection = () => {
               <HeroBadge text="⊙ UI/UX & Graphic Designer" />
             </div>
 
-            {/* Heading + Arrow INLINE */}
+            {/* Heading + Arrow  */}
             <div ref={headingRef} className="flex items-center gap-2 mb-6 flex-wrap">
               <h1 className="text-6xl sm:text-7xl md:text-8xl tracking-tight leading-none flex items-center gap-4 flex-wrap">
                 <span className="text-white font-normal">Johan</span>
@@ -124,7 +124,7 @@ const HeroSection = () => {
               <HeroAboutAction />
             </div>
 
-            {/* Description — Letter-by-letter character reveal animation */}
+            {/*  Letter reveal animation */}
             <div ref={descRef} className="mb-9">
               <AnimatedTypewriterText
                 className="text-base md:text-lg leading-relaxed max-w-lg"
@@ -132,10 +132,10 @@ const HeroSection = () => {
               />
             </div>
 
-            {/* Buttons — Vertical full-width */}
+            {/* Buttons — Vertical full-width with ProcessSection AnimatedButton style */}
             <div ref={btnsRef} className="flex flex-col sm:flex-row w-full sm:w-auto items-stretch sm:items-center gap-3 sm:gap-4">
-              <HeroButton variant="secondary" href="#projects" className="w-full sm:w-auto text-center py-3.5">See All Projects</HeroButton>
-              <HeroButton variant="primary" href="#contact" className="w-full sm:w-auto text-center py-3.5">Contact Now</HeroButton>
+              <AnimatedButton variant="dark" href="#projects" className="w-full sm:w-auto text-center py-3.5">See All Projects</AnimatedButton>
+              <AnimatedButton variant="light" href="#contact" className="w-full sm:w-auto text-center py-3.5">Contact Now</AnimatedButton>
             </div>
           </div>
 
@@ -166,7 +166,7 @@ const HeroSection = () => {
               />
             </div>
 
-            {/* EXACT 2 CURSOR ARROWS */}
+            {/* 2 CURSOR ARROWS */}
 
             {/* Cursor 1: Pointing top-right */}
             <div
@@ -183,7 +183,7 @@ const HeroSection = () => {
             <div
               ref={arrow2Ref}
               className="absolute z-30 pointer-events-none"
-              style={{ top: '155px', left: '228px' }}
+              style={{ top: '155px', left: '238px' }}
             >
               <svg width="18" height="24" viewBox="0 0 18 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinejoin="round" strokeLinecap="round">
                 <path d="M1 1L1 18.5L5 14L7.5 21L10 20L7.5 13H13L1 1Z" />

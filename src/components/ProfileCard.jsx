@@ -17,14 +17,14 @@ const ProfileCard = () => {
           <div className="absolute bottom-3.5 left-1/2 -translate-x-1/2 z-10 inline-flex items-center gap-2
            px-3.5 py-1.5 rounded-full bg-black/80 backdrop-blur-md text-xs font-normal text-white shadow-lg whitespace-nowrap">
             {/* Live Signal Transmitter Ping Dot */}
-            <div className="relative flex items-center justify-center w-2 h-2 shrink-0">
+            <div className="relative flex items-center justify-center w-1.5 h-1.5 shrink-0">
               {/* Expanding Signal Wave Ring */}
               <span className="absolute inset-0 rounded-full bg-[#4ade80] animate-signal-ping" />
               {/* Soft Ambient Core Glow */}
-              <span className="absolute inset-0 rounded-full bg-[#22c55e] blur-[2px] opacity-70" />
+              <span className="absolute inset-0 rounded-full bg-[#22c55e]  opacity-70" />
               {/* Core 3D Diode Light */}
               <span
-                className="relative w-1.5 h-1.5 rounded-full shadow-[0_0_4px_rgba(74,222,128,0.9)]"
+                className="relative w-1.5 h-1.5 rounded-full "
                 style={{
                   background: 'radial-gradient(circle at 35% 35%, #dcfce7 0%, #15803d 45%, #15803d 100%)',
                 }}

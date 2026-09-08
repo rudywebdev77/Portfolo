@@ -1,6 +1,6 @@
 import 'react';
 
-// Exact match to reference card style
+
 const TestimonialCard = ({ quote, author, className = '', style = {} }) => {
   return (
     <div
@@ -18,11 +18,11 @@ const TestimonialCard = ({ quote, author, className = '', style = {} }) => {
         ${className}
       `}
     >
-      {/* Quote — crisp white text */}
+      {/* Quote white text */}
       <p className="text-[14px] md:text-[15px] font-normal text-white leading-snug mb-3 tracking-normal">
         {quote}
       </p>
-      {/* Author — right aligned mono zinc-400 */}
+      {/* Author — right aligned */}
       <p className="text-[11px] md:text-[12px] font-mono text-zinc-400 text-right">
         {author}
       </p>

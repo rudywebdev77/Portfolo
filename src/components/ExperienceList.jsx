@@ -14,15 +14,15 @@ const ExperienceList = () => {
         <div
           key={idx}
           className="w-full rounded-xl bg-black/50  px-4 py-6.5 flex items-center
-           justify-between text-md md:text-xl  "
+           justify-between text-md md:text-[17px]  "
         >
           <div className="w-1/3 text-zinc-400 font-medium tracking-tight">
             {exp.role}
           </div>
-          <div className="w-1/3 text-zinc-400 font-normal text-center">
+          <div className="w-1/3 text-zinc-400 font-normal text-center tracking-tight">
             {exp.company}
           </div>
-          <div className="w-1/3 text-zinc-500 font-mono text-right">
+          <div className="w-1/3 text-zinc-500 font-mono text-right tracking-tight">
             {exp.year}
           </div>
         </div>
